@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 auto;
+    width: 33%;
+    height: 309px;
+    background-color: cornsilk;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius:12px;
+    border: 2px solid blue;
+}
+
+.display-window {
+    border: 1px solid blue;
+    width: 289px;
+    height: 60px;
+    background: black;
+    color:lime;
+    display: flex;
+    flex-flow: row;
+    align-self: center;
+    margin: 5px auto;
+    font-family: "Courier New", Courier;
+    font-size: 1em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.calc-body{
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    flex: 0 1 auto;
+    width: 77%;
+    height: 188px;
+    align-self: center;
+}
+
+.btn-row{
+    display: flex;
+    flex-flow: row;
+    flex: 0 1 auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.calcbuttons {
+    padding:10px;
+
+}
+
+.numberbutton, .operationbutton {
+    width: 45px;
+    margin: 5px;
+    font-weight: bold;
+    height: 25px;
+    border-radius: 4px;
+}
+
+.debug-row{
+    display: none;
+    /*display: flex;
+    flex-flow: column;
+    margin: 10px auto;*/
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Better Cloud Calculator</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js.map"></script>
+    <script type="text/javascript" src="javascripts/myCalc.js"></script>
+    <link rel="stylesheet" href="stylesheets/calc.css" />
+</head>
+<body ng-app="myCalc">
+  <div class="container" ng-controller="myCtrl">
+    <div class="display-window">
+        {{output}}
+    </div>
+    <div class="calc-body calcbuttons">
+      <div class="btn-row">
+          <button name="btn1" class="numberbutton" value="1" ng-click="updateOutput(1)">1</button>
+          <button name="btn2" class="numberbutton" value="2" ng-click="updateOutput(2)">2</button>
+          <button name="btn3" class="numberbutton" value="3" ng-click="updateOutput(3)">3</button>
+          <button name="btnMinus" class="operationbutton" ng-click="subtract()"> - </button>
+      </div>
+      <div class="btn-row">
+          <button name="btn4" class="numberbutton" value="4" ng-click="updateOutput(4)">4</button>
+          <button name="btn5" class="numberbutton" value="5" ng-click="updateOutput(5)">5</button>
+          <button name="btn6" class="numberbutton" value="6" ng-click="updateOutput(6)">6</button>
+          <button name="btnPlus" class="operationbutton" ng-click="add()"> + </button>
+      </div>
+        <div class="btn-row">
+            <button name="btn7" class="numberbutton" value="7" ng-click="updateOutput(7)">7</button>
+            <button name="btn8" class="numberbutton" value="8" ng-click="updateOutput(8)">8</button>
+            <button name="btn9" class="numberbutton" value="9" ng-click="updateOutput(9)">9</button>
+            <button name="btnMulti" class="operationbutton" ng-click="multiply()"> * </button>
+        </div>
+        <div class="btn-row">
+            <button name="btn0" class="numberbutton" value="0" ng-click="updateOutput(0)">0</button>
+            <button name="btnDivid" class="operationbutton" ng-click="division()"> / </button>
+            <button name="btnEqual" class="operationbutton" ng-click="calculate()">=</button>
+            <button name="btnClear" class="operationbutton" ng-click="clear()">C</button>
+        </div>
+    </div>
+      <div class="debug-row">
+          <span>Pending Operation: {{pendingOp}}</span>
+          <span>Last Operation: {{lastOp}}</span>
+          <span>Running Total: {{runningTotal}}</span>
+          <span>Pending Value: {{pendingVal}}</span>
+          <span>New Number: {{newNumber}}</span>
+
+      </div>
+  </div>
+</body>
+</html>
